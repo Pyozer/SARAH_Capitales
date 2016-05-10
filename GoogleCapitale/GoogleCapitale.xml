@@ -1,0 +1,36 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleGoogleCapitale" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+	<rule id="ruleGoogleCapitale" scope="public">
+		<example>Jarvis quelle est la capitale de la France ?</example>
+		<tag>out.action=new Object(); </tag>
+
+		<item>Jarvis</item>
+
+    	<item>
+    		<item repeat="0-1">
+				<one-of>
+					<item>tu sais</item>
+					<item>sais tu</item>
+					<item>peux tu me dire</item>
+					<item>tu peux me dire</item>
+					<item>peux tu me donner</item>
+					<item>tu peux me donner</item>
+					<item>dit moi</item>
+					<item>donne moi</item>
+					<item>c'est quoi</item>
+					<item>quel est</item>
+					<item>quelle est</item>
+				</one-of>
+			</item>
+			<one-of>
+				<item>la capitale</item>
+				<item>capitale</item>
+				<item>quel est la capitale</item>
+				<item>quelle est la capitale</item>
+			</one-of>
+		</item>
+
+		<ruleref special="GARBAGE" />
+
+		<tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/GoogleCapitale";</tag>
+	</rule>
+</grammar>

@@ -1,0 +1,9 @@
+{
+	"modules" : { 
+		"GoogleCapitale"  : {
+			"description": "Permet de récupérer la capitale d'un pays via Google",
+			"version": "1.0",
+			"auteur": "Jean-Charles Moussé"
+		}
+	}
+}
